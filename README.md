@@ -6,8 +6,10 @@ In order to be a good developer, I need to understand the fundamentals of Comput
 
 This git repo created at 22nd March 2026 and every new chapter will be pushed at least 1 chapter / week.
 ## Chapters
-
+- Chapter 1: Dialogue - Skipped
 - [Chapter 2: Introduction to Operating Systems](chapter-2/)
+- Chapter 3: Dialogue - Skipped
+- [Chapter 4: The Abstraction: The Process](chapter-4/)
 
 ## Contact Me
 If you have any question or just want to say hi, can contact me on:
