@@ -104,7 +104,7 @@ From Running -> Ready = Process has been descheduled
 
 From Running -> Blocked = Process did I/O and waiting for the devices to finish
 
-From Blocked -> Running = Device I/O done, ready to be scheduled
+From Blocked -> Ready = Device I/O done, ready to be scheduled
 
 ## Data Structure
 OS also a program, a program that keep track the running process. That means OS will have some kind of data structure that stores the process that currently Running, Ready, Blocked.
