@@ -13,6 +13,7 @@ This git repo created at 22nd March 2026 and every new chapter will be pushed at
 - [Chapter 5: Interlude: Process API](chapter-5/)
 - [Chapter 6: Mechanism: Limited Direct Execution](chapter-6/)
 - [Chapter 7: Scheduling: Introduction](chapter-7/)
+- [Chapter 8: Scheduling: The Multi-Level Feedback Queue](chapter-8/)
 
 ## Contact Me
 If you have any question or just want to say hi, can contact me on:
