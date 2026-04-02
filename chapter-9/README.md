@@ -26,5 +26,29 @@ If number 1-75 picked. Process A got executed by CPU.
 
 If number 76-100 picked. Process B got executed by CPU.
 
-## Ticket Mechanisms
+## Implementation
 
+![Lottery implementation](img/chapter-9-img-1.png)
+
+You need random number generator to pick the winning ticket, and a data structure to keep track of the process, and total number of ticket.
+
+Example:
+
+- Random number got generated is 300
+- The pointer start from head, go to Job A
+- Because total ticket is 100, 100 is lesss than 300, pointer go to next
+- Pointer go to B, total now 150
+- Because total ticket is 150, 150 is lesss than 300, pointer go to next
+- Pointer go to C, total now 400, 400 >= 300, C go picked.
+
+## How to assign ticket
+
+User of the computer will assign the ticket to the process.
+
+## Why not deterministic
+
+Because randomness sometimes doesn't deliver the exact proportion, Waldspurger invented new algorithm called **Stride scheduling**. 
+
+## Summary
+
+There's another type of scheduling called Proportional Share scheduling, it's implemented by using lottery ticket, scheduler will try to generate random number to determine which process that gonna picked up. The ticket is assigned by the user. If user doesn't want to use randomness check, user can use Stride scheduling.
