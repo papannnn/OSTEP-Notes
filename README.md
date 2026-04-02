@@ -15,6 +15,9 @@ This git repo created at 22nd March 2026 and every new chapter will be pushed at
 - [Chapter 7: Scheduling: Introduction](chapter-7/)
 - [Chapter 8: Scheduling: The Multi-Level Feedback Queue](chapter-8/)
 - [Chapter 9: Scheduling: Proportional Share (Fair Share)](chapter-9/)
+- Chapter 10: Multiprocessor Scheduling (Advanced) - Skipped for now, need to finish Concurrency first
+- Chapter 11: Dialogue - Skipped
+- Chapter 12: Dialogue - Skipped
 
 ## Contact Me
 If you have any question or just want to say hi, can contact me on:
