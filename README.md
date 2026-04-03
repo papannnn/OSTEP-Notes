@@ -21,6 +21,7 @@ This git repo created at 22nd March 2026 and every new chapter will be pushed at
 - Chapter 11: Dialogue - Skipped
 - Chapter 12: Dialogue - Skipped
 - [Chapter 13: The Abstraction: Address Spaces](chapter-13/)
+- [Chapter 14: Interlude: Memory API](chapter-14/)
 
 ## Contact Me
 If you have any question or just want to say hi, can contact me on:
