@@ -70,4 +70,101 @@ If we do the same loop after we done looping, the TLB miss will most likely zero
 
 In olden days, it was Hardware who handles that, that means, hardware need to know where exactly the page tables resides in memory (via page table register).
 
-Now, more modern architecture is using **software managed TLB**. On TLB miss, hardware raise an exception which pauses the instruction stream
+Now, more modern architecture is using **software managed TLB**. On TLB miss, hardware raise an exception which pauses the instruction stream, raise the privilege to kernel level, and trigger trap handler.
+
+After that, it will read the missed page, and it will update the TLB, and rerun the instruction.
+
+The primary advantages software managed TLB is flexibility, OS can use any data structure to handle the page table without relying the hardware. Other reason is simplicity
+
+![TLB control flow algorithm (OS handled)](img/chapter-19-img-3.png)
+
+##  TLB Contents: What’s In There?
+
+A typical TLB might have 32, 64, 128 entries. Basically any given translation can be anywhere in TLB. And hardware will search in TLB in parallel to find the translation.
+
+Inside TLB entry might look like this
+
+```
+VPN | PFN | other bits
+```
+
+For other bit, for example **protection bit**, how the page can be accessed.
+
+Code page usually can only read & execute
+
+Heap page usually can only read & write.
+
+## TLB Issue: Context Switches
+
+TLB contains translated virtual to physical address of the page that only valid on the currently running process.
+
+That means other process doesn't have any meaning to this data except the owning process.
+
+### Example
+
+When P1 process is running it will assume TLB will cache the respective virtual-physical address.
+
+Let's assume 10th virtual page address of P1 is mapped to physical frame number 100.
+
+Then P2 comes, and OS decided to context switch to P2 now.
+
+Let's assume P2 also use 10th virtual page. And it's mapped to physical frame number 170.
+
+![TLB example scenario](img/chapter-19-img-4.png)
+
+In this image, TLB doesn't know which translation belong to whom.
+
+One approach is to flush all of the TLB when doing context switch.
+
+That means making all of the content's valid value to 0.
+
+But, flushing TLB means every context switch will get TLB miss. Which is affect performance.
+
+To reduce this overhead, we can add a new bits called **Address space identifier (ASID)**, basically it's like PID but less bits (8 vs 32).
+
+![TLB example scenario with ASID](img/chapter-19-img-5.png)
+
+## Issue: Replacement Policy
+
+When we add new entry on TLB, we need to replace the old one, because if we're not replacing the old one, the TLB will be full.
+
+One common approach is to do LRU (least recently used).
+
+Another typical approach is do random pick.
+
+## A Real TLB Entry
+
+For example we take from MIPS
+R4000.
+
+![A MIPS TLB entry](img/chapter-19-img-6.png)
+
+It's support 32 bit address with 4KB of page size. That means, we will expect 12 bit of offset, and 20 bit of VPN.
+
+But if you see on the image, there only 19 bit of VPN.
+
+Turns out, user address space only took half the address space, and the rest is kernel owned.
+
+As you can see on the image, the PFN took 24 bit, that means it can support up to 64GB of memory (2^24 * 4KB page size).
+
+We can see a global bits (G), that is for a flag it can be globally avaiable through process, if global bit is 1, ASID will be ignored.
+
+We can see ASID bit also.
+
+We can see coherence (C) bits also.
+
+We can see dirty bit (D) also.
+
+We can see valid bit (V) also.
+
+Some of the bits are unused (shaded gray).
+
+## Summary
+
+To make paging faster, we need TLB.
+
+TLB is basically a cache for mapping the virtual address -> physical address.
+
+If OS can't find the mapping in TLB, we call it TLB miss (Cache miss). Otherwise, it's TLB hit (cache hit).
+
+We want to get TLB hit as much as possible, because if there's too many TLB miss, the performance will degrade.

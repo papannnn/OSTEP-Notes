@@ -26,6 +26,7 @@ This git repo created at 22nd March 2026 and every new chapter will be pushed at
 - [Chapter 16: Segmentation](chapter-16/)
 - [Chapter 17: Free-Space Management](chapter-17/)
 - [Chapter 18: Paging: Introduction](chapter-18/)
+- [Chapter 19: Paging: Faster Translations (TLBs)](chapter-19/)
 
 ## Contact Me
 If you have any question or just want to say hi, can contact me on:
