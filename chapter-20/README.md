@@ -98,3 +98,28 @@ Virtual page 4 and 5 are for heap.
 
 And virtual page 254 and 255 is for stack.
 
+Remember the full page table will have 256 entries.
+
+Assume each PTE will have 4 bytes in size.
+
+That means page table size will be 256 x 4 = 1MB.
+
+Page size is 64 byte, that means 1MB / 64 = 16 entry per page directory.
+
+![Page directory index, VPN, Offset](img/chapter-20-img-6.png)
+
+Because we need 16 entry to store the page table, we need 4 bit to tell the which page table we want to access.
+
+Now, the VPN will have 8 bit left, we use this bit to find which page we want to find inside page table.
+
+That means the order of finding is
+
+![Page directory index, Page table index, VPN, Offset](img/chapter-20-img-7.png)
+
+Where the page table (Page Directory Index) -> Where's the page (Page table index) -> Offset
+
+![A page directory, and pieces of page table](img/chapter-20-img-8.png)
+
+## Summary
+
+To reduce the memory goes waste because paging, we can do multi level paging, but the system will become more complex.
