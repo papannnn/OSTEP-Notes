@@ -29,6 +29,7 @@ This git repo created at 22nd March 2026 and every new chapter will be pushed at
 - [Chapter 19: Paging: Faster Translations (TLBs)](chapter-19/)
 - [Chapter 20: Paging: Smaller Tables](chapter-20/)
 - [Chapter 21: Beyond Physical Memory: Mechanisms](chapter-21/)
+- [Chapter 22: Beyond Physical Memory: Policies](chapter-22/)
 
 ## Contact Me
 If you have any question or just want to say hi, can contact me on:
