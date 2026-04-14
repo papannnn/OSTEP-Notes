@@ -30,6 +30,7 @@ This git repo created at 22nd March 2026 and every new chapter will be pushed at
 - [Chapter 20: Paging: Smaller Tables](chapter-20/)
 - [Chapter 21: Beyond Physical Memory: Mechanisms](chapter-21/)
 - [Chapter 22: Beyond Physical Memory: Policies](chapter-22/)
+- Chapter 23: The VAX/VMS Virtual Memory System - Skipped
 
 ## Contact Me
 If you have any question or just want to say hi, can contact me on:
