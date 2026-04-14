@@ -32,6 +32,7 @@ This git repo created at 22nd March 2026 and every new chapter will be pushed at
 - [Chapter 22: Beyond Physical Memory: Policies](chapter-22/)
 - Chapter 23: The VAX/VMS Virtual Memory System - Skipped
 - Chapter 24: Dialogue - Skipped
+- Chapter 25: Dialogue - Skipped
 
 ## Contact Me
 If you have any question or just want to say hi, can contact me on:
