@@ -126,3 +126,29 @@ The problem is, if Thread 1 got context switch before finishing the 3 of those i
 
 ![The problem: Up close and personal](img/chapter-26-img-5.png)
 
+What we see here is a race condition.
+
+Because multiple thread executing this code can result in race condition, we call this code a critical section.
+
+Critical section is a piece of code that access same variable / resources. And must not run concurrently by more than one thread.
+
+What we want for this code is, mutual exclusion. This property guarantees that if one thread access the critical section, other thread can't access it.
+
+## The Wish For Atomicity
+
+We want these instruction done atomically, which means these code should run as a whole unit.
+```
+mov 0x8049a1c, %eax
+add $0x1, %eax
+mov %eax, 0x8049a1c
+```
+
+## Summary
+
+Multithreading almost the same like multiprocessing
+
+The difference is, multithreading happens in same process, that means it potentially can share the data / resources.
+
+When multiple thread accessing and writing the same data at the same time, there's a chance of race condition. This will make the application not running as intended.
+
+We can fix it by adding mutex to them, mutex makes sure only 1 thread can access that critical section.
