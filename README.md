@@ -34,6 +34,7 @@ This git repo created at 22nd March 2026 and every new chapter will be pushed at
 - Chapter 24: Dialogue - Skipped
 - Chapter 25: Dialogue - Skipped
 - [Chapter 26: Concurrency: An Introduction](chapter-26/)
+- [Chapter 27: Interlude: Thread API](chapter-27/)
 
 ## Contact Me
 If you have any question or just want to say hi, can contact me on:
