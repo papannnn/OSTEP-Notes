@@ -119,4 +119,12 @@ If the scheduler makes a bad decision, the performance can still be bad too.
 
 Because what if the scheduler always pick the thread that doesn't have the lock? That means all of the computation will be on the spinning / yielding
 
-Because of this, we need an OS support, we need to have 
+Because of this, we need an OS support, we need to have a way to know which thread is currently running and waiting the lock.
+
+In solaris, there's a `park()` and `unpark(threadID)`
+
+![Lock with queues, Test and set, yield and wakeup](img/chapter-28-img-4.png)
+
+## Summary
+
+In order to create a lock, we can't do it by ourself, we need hardware support or even OS support.
