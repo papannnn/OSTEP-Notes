@@ -36,6 +36,7 @@ This git repo created at 22nd March 2026 and every new chapter will be pushed at
 - [Chapter 26: Concurrency: An Introduction](chapter-26/)
 - [Chapter 27: Interlude: Thread API](chapter-27/)
 - [Chapter 28: Locks](chapter-28/)
+- [Chapter 29: Lock-based Concurrent Data Structures](chapter-29/)
 
 ## Contact Me
 If you have any question or just want to say hi, can contact me on:
