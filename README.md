@@ -38,6 +38,7 @@ This git repo created at 22nd March 2026 and every new chapter will be pushed at
 - [Chapter 28: Locks](chapter-28/)
 - [Chapter 29: Lock-based Concurrent Data Structures](chapter-29/)
 - [Chapter 30: Condition Variables](chapter-30/)
+- [Chapter 31: Semaphores](chapter-31/)
 
 ## Contact Me
 If you have any question or just want to say hi, can contact me on:
