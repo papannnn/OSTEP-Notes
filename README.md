@@ -1,5 +1,15 @@
 # OSTEP-Notes
 
+## Status
+
+I finished the first 2 part of the book!
+
+So far I really like the book, but I will skip the 3rd part (Storage) because I don't think it relates to my career for now.
+
+I'll move to another book which is **Inside the Machine: An Illustrated Introduction to Microprocessors and Computer Architecture**
+
+You can see my notes in [here](https://github.com/papannnn/Inside-The-Machine-Notes)
+
 ## Motivation
 
 In order to be a good developer, I need to understand the fundamentals of Computer Science theory, one of them is Operating System. I'll try to read the book about it and try to rewrite it again based on my understanding. The book that I use to learn this is [Operating Systems: Three Easy Pieces, by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau](https://pages.cs.wisc.edu/~remzi/OSTEP/)
